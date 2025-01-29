@@ -137,7 +137,7 @@ fi
 
 rm -rf arch/arm64/configs/temp_defconfig
 rm -rf build/out/$MODEL
-mkdir -p build/out/$MODEL/zip/files
+mkdir -p build/out/$MODEL/zip
 mkdir -p build/out/$MODEL/zip/META-INF/com/google/android
 
 # Build kernel image
@@ -250,9 +250,9 @@ echo "-----------------------------------------------"
 # Build zip
 echo "Building zip..."
 echo "-----------------------------------------------"
-cp build/out/$MODEL/boot.img build/out/$MODEL/zip/files/boot.img
-cp build/out/$MODEL/dtb.img build/out/$MODEL/zip/files/dtb.img
-cp build/out/$MODEL/dtbo.img build/out/$MODEL/zip/files/dtbo.img
+cp build/out/$MODEL/boot.img build/out/$MODEL/zip/boot.img
+cp build/out/$MODEL/dtb.img build/out/$MODEL/zip/dtb.img
+cp build/out/$MODEL/dtbo.img build/out/$MODEL/zip/dtbo.img
 cp build/update-binary build/out/$MODEL/zip/META-INF/com/google/android/update-binary
 cp build/updater-script build/out/$MODEL/zip/META-INF/com/google/android/updater-script
 
@@ -266,9 +266,9 @@ pushd build/out/$MODEL/zip > /dev/null
 DATE=`date +"%d-%m-%Y_%H-%M-%S"`    
 
 if [[ "$KSU_OPTION" == "y" ]]; then
-    NAME="$version"_"$MODEL"_UNOFFICIAL_KSU_"$DATE".zip
+    NAME="$version"-"$MODEL"-KSU-NEXT-v2+SuSFS-"$DATE".zip
 else
-    NAME="$version"_"$MODEL"_UNOFFICIAL_"$DATE".zip
+    NAME="$version"-"$MODEL"-"$DATE".zip
 fi
 zip -r -qq ../"$NAME" .
 popd > /dev/null

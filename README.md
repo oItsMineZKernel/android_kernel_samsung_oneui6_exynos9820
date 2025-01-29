@@ -1,8 +1,19 @@
-# ExtremeKernel for Exynos 9820 devices
+# oItsMineZKernel for Exynos 9820/9825 Devices (S10/Note10)
+
+<img src="https://github.com/rifsxd/KernelSU-Next/blob/next/assets/kernelsu_next.png" style="width: 96px;" alt="logo">
+
+ExtremeKernel with KernelSU Next & SuSFS Based on [ExtremeKernel](https://github.com/Ocin4ever/ExtremeKernel) by [`Ocin4ever`](https://github.com/Ocin4ever) & [`ExtremeXT`](https://github.com/ExtremeXT)
 
 ## Features
 
-- TBD
+- KernelSU Next
+- SuSFS
+
+## How to Install
+Warning: `Please backup your modules before flashing this kernel, as all installed modules may be lost.`
+- Flash Zip file via `TWRP`
+- Install `KernelSU Next` from [Here](https://github.com/rifsxd/KernelSU-Next/releases)
+- Install `susfs4ksu module` from [Here](https://github.com/sidex15/susfs4ksu-module/releases)
 
 ## Supported devices:
 
@@ -36,20 +47,32 @@ N976N - Note 10+ 5G (Korean) - d2xks
 
 1. Set up build environment as per Google documentation
 
-https://source.android.com/docs/setup/start/requirements
+   <a href="https://source.android.com/docs/setup/start/requirements" target="_blank">https://source.android.com/docs/setup/start/requirements</a>
 
 2. Properly clone repository with submodules (KernelSU and toolchains)
 
-```git clone --recurse-submodules https://github.com/Ocin4ever/ExtremeKernel.git```
+```html
+git clone --recurse-submodules https://github.com/oItsMineZ/oItsMineZKernel-OneUI6.git
+```
 
 3. Build for your device
 
-```./build.sh -m beyond2lte```
+```html
+./build.sh -m d2s -k y
+```
 
 4. Fetch the flashable zip of the kernel that was just compiled
 
-```build/out/[your_device]/ExtremeKernel...zip```
+```html
+build/out/[your_device]/oItsMineZKernel-OneUI6...zip
+```
 
 5. Flash it using a supported recovery like TWRP
 
 6. Enjoy!
+
+## Credits
+
+- [`rifsxd`](https://github.com/rifsxd) for [KernelSU Next](https://github.com/rifsxd/KernelSU-Next)
+- [`simonpunk`](https://gitlab.com/simonpunk) for [susfs4ksu (Kernel 4.14 Non-GKI)](https://gitlab.com/simonpunk/susfs4ksu/-/tree/kernel-4.14)
+- [`Ocin4ever`](https://github.com/Ocin4ever) & [`ExtremeXT`](https://github.com/ExtremeXT) for [ExtremeKernel](https://github.com/Ocin4ever/ExtremeKernel)
