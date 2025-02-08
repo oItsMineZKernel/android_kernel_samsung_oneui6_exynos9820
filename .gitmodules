@@ -3,4 +3,5 @@
 	url = https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b
 [submodule "KernelSU-Next"]
 	path = KernelSU-Next
-	url = https://github.com/oItsMineZ/KernelSU-Next.git
+	url = https://github.com/rifsxd/KernelSU-Next
+	branch = next-susfs
