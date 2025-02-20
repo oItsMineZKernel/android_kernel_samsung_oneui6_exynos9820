@@ -52,7 +52,7 @@ N976N - Note 10+ 5G (Korean) - d2xks
 2. Properly clone repository with submodules (KernelSU and toolchains)
 
 ```html
-git clone --recurse-submodules https://github.com/oItsMineZ/oItsMineZKernel-OneUI6.git
+git clone --recurse-submodules https://github.com/oItsMineZKernel/android_kernel_samsung_oneui6_exynos9820
 ```
 
 3. Build for your device
